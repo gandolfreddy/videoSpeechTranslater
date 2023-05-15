@@ -49,12 +49,12 @@ with open(file_path, "rb") as audio_file:
 > edge-srt-to-speech <srt file> <output_audio file> [--voice <voice name>] [--default-speed<=[+-][0-100]%>]
 ```
 ### 結合原影片與英文版配音。
-* 取得去除聲音版本的影像檔（CLI）
+* 取得去除聲音版本的影像檔（CLI）。
 ```bash
 # execute in PowerShell
 > ffmpeg -i <video file> -vcodec copy -an <muted video file>
 ```
-* 結合靜音影像檔與英文版配音（CLI）
+* 結合靜音影像檔與英文版配音（CLI）。
 ```bash
 # execute in PowerShell
 > ffmpeg -i <muted video file> -i <audio file> -c:v copy -c:a aac <output_video file> -shortest
@@ -66,6 +66,8 @@ with open(file_path, "rb") as audio_file:
 ## 相關工具
 - [Clipchamp](https://app.clipchamp.com/)
 - [Download FFmpeg](https://ffmpeg.org/download.html#build-windows)
+- [rany2/edge-srt-to-speech](https://github.com/rany2/edge-srt-to-speech)
+- [rany2/edge-tts](https://github.com/rany2/edge-tts)
 
 ## 參考資源
 1. [Speech to text - OpenAI document](https://platform.openai.com/docs/guides/speech-to-text)
@@ -75,3 +77,7 @@ with open(file_path, "rb") as audio_file:
 5. [appfromape/open_ai_whisper_1_transcribe](https://github.com/appfromape/open_ai_whisper_1_transcribe)
 6. [openai/openai-cookbook](https://github.com/openai/openai-cookbook)
 7. [( Day 18 ) 取出影片聲音、影片加入聲音](https://ithelp.ithome.com.tw/articles/10292945?sc=rss.qu)
+8. [Subtitles to speech converter](https://voicenotebook.com/srtspeaker.php)
+9. [Documentation - FFmpeg](https://www.ffmpeg.org/documentation.html)
+10. [使用 ffmpeg 移除影片中的聲音 @ Windows](https://blog.changyy.org/2013/08/ffmpeg-windows.html)
+11. [影音剪輯 / 使用 ffmpeg 指令合併影片及聲音檔 (直接複製資料不重新編碼)](https://note.charlestw.com/merging-video-and-audio-in-ffmpeg/)
