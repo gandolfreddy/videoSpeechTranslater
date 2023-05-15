@@ -38,11 +38,14 @@ def get_audio(srt_path, audio_path, **kwargs):
     os.system(cmd)
 
 
-def get_muted_video():
+def get_muted_video(src_path, dst_path):
     '''
         Get muted video from original video.
+        CLI example:
+            ffmpeg -i a.mp4 -vcodec copy -an a_muted.mp4
     '''
-    pass
+    cmd = f"ffmpeg -i {src_path} -vcodec copy -an {dst_path}"
+    os.system(cmd)
 
 
 def combine_muted_video_and_audio():
@@ -53,17 +56,21 @@ def combine_muted_video_and_audio():
 
 
 def main():
-    get_srt(
+    # get_srt(
+    #     src_path="C:\\Users\\loveh\\Desktop\\test_project\\src_videos\\_1_遊戲介紹.mp4", 
+    #     dst_path="C:\\Users\\loveh\\Desktop\\test_project\\srts\\_1_遊戲介紹.srt",
+    #     response_format="srt", 
+    #     language="en",
+    # )
+    # get_audio(
+    #     srt_path="C:\\Users\\loveh\\Desktop\\test_project\\srts\\_1_遊戲介紹.srt", 
+    #     audio_path="C:\\Users\\loveh\\Desktop\\test_project\\audios\\_1_遊戲介紹.mp3", 
+    #     voice="en-US-JennyNeural", 
+    #     default_speed="-25%",
+    # )
+    get_muted_video(
         src_path="C:\\Users\\loveh\\Desktop\\test_project\\src_videos\\_1_遊戲介紹.mp4", 
-        dst_path="C:\\Users\\loveh\\Desktop\\test_project\\srts\\_1_遊戲介紹.srt",
-        response_format="srt", 
-        language="en",
-    )
-    get_audio(
-        srt_path="C:\\Users\\loveh\\Desktop\\test_project\\srts\\_1_遊戲介紹.srt", 
-        audio_path="C:\\Users\\loveh\\Desktop\\test_project\\audios\\_1_遊戲介紹.mp3", 
-        voice="en-US-JennyNeural", 
-        default_speed="-25%",
+        dst_path="C:\\Users\\loveh\\Desktop\\test_project\\muted_videos\\_1_遊戲介紹_muted.mp4",
     )
 
 
