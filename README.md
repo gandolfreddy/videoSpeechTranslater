@@ -6,9 +6,14 @@ A speech translater for video with OpenAI Whisper api.
     > 可由 Whisper api 取得語音辨識結果並翻譯。 
 - [x] 2. 取得字幕的翻譯（中翻英）。
     > 可由 Whisper api 取得語音辨識結果並翻譯。 
-- [ ] 3. 取得英文版字幕的配音語音。
-- [ ] 4. 結合原影片與英文版配音。
-    > 可由 ffmpeg 取得靜音影片。 
+- [x] 3. 取得英文版字幕的配音語音。
+    > 透過 edge-srt-to-speech 0.0.20 取得可接受配音。
+- [x] 4. 結合原影片與英文版配音。
+    > 透過 ffmpeg 取得靜音影片。 
+    > 透過 ffmpeg 結合靜音影片與音訊。 
+
+## 實驗結果
+- 此流程基本可動作，但結果影片中，有部份音訊因受到字幕檔時間限制，讀文字的速度較快，需要靠後期精修處理。
 
 ## 相關工具
 - [Clipchamp](https://app.clipchamp.com/)
