@@ -22,9 +22,11 @@ A speech translater for video with OpenAI Whisper api for Windows 10/11.
         ```
     * 下載壓縮檔。
         ![image](https://github.com/gandolfreddy/videoSpeechTranslater/assets/22278312/2f85cacf-eef2-4193-9178-ab8c130f62cb)
+        
 3. 於 [OpenAI](https://platform.openai.com/account/api-keys) 網站中，申請一組 API Key。
 4. 於下載後的專案目錄中，新增一個名為 `.env` 的檔案，內容填入 `OPENAI_WHISPER_API_KEY='此處填入申請的 API Key'`。
     ![image](https://github.com/gandolfreddy/videoSpeechTranslater/assets/22278312/23b856c0-5880-4e12-9d79-ed7b3beb4d49)
+    
 5. 於專案目錄中開啟命令提示列介面（或於命令提示列介面中，將操作的目錄調整至專案目錄），執行以下命令，用以安裝需要的模組／套件。
     ```bash
     # execute in PowerShell
