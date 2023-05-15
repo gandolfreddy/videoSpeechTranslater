@@ -21,6 +21,7 @@ A speech translater for video with OpenAI Whisper api for Windows 10/11.
         > git clone https://github.com/gandolfreddy/videoSpeechTranslater.git
         ```
     * 下載壓縮檔。
+
         ![image](https://github.com/gandolfreddy/videoSpeechTranslater/assets/22278312/2f85cacf-eef2-4193-9178-ab8c130f62cb)
         
 3. 於 [OpenAI](https://platform.openai.com/account/api-keys) 網站中，申請一組 API Key。
