@@ -1,6 +1,9 @@
 # videoSpeechTranslater
 A speech translater for video with OpenAI Whisper api.
 
+## 相關工具
+- [Clipchamp](https://app.clipchamp.com/)
+
 ## 參考資源
 1. [Speech to text - OpenAI document](https://platform.openai.com/docs/guides/speech-to-text)
 2. [[ChatGPT] 如何使用Whisper API 與 ChatGPT API 快速摘要YouTube 影片?](https://youtu.be/uD5_pKbBhgo)
