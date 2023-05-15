@@ -1,2 +1,2 @@
 # videoSpeechTranslater
-a speech translater for video with OpenAI Whisper api
+A speech translater for video with OpenAI Whisper api.
