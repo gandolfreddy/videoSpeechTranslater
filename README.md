@@ -9,8 +9,7 @@ A speech translater for video with OpenAI Whisper api.
 - [x] 3. 取得英文版字幕的配音語音。
     > 透過 `edge-srt-to-speech` 取得可接受配音。
 - [x] 4. 結合原影片與英文版配音。
-    > 透過 ffmpeg 取得靜音影片。 
-    > 透過 ffmpeg 結合靜音影片與音訊。 
+    > 透過 ffmpeg 取得靜音影片，並透過 ffmpeg 結合靜音影片與音訊。 
 
 ## 實驗記錄
 ### 取得原影片語音轉文字內容之字幕，並取得字幕的翻譯（中翻英）。
