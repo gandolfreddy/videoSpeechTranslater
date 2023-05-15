@@ -44,12 +44,12 @@ A speech translater for video with OpenAI Whisper api for Windows 10/11.
     * 相關參數說明。
         |參數|說明|
         |---|---|
-        |-h, --help | 顯示此說明訊息並退出。 |
-        |-s SRC_PATH, --src-path SRC_PATH | 來源影片的路徑，例如 a.mp4。 |
-        |-sp SRT_PATH, --srt-path SRT_PATH | srt 檔案的資料夾路徑，例如 srt/。預設值：$home/Desktop/material_dir_[yyyymmdd]。 |
-        |-ap AUDIO_PATH, --audio-path AUDIO_PATH | 音訊檔案的資料夾路徑，例如 audio/。預設值：$home/Desktop/material_dir_[yyyymmdd]。 |
-        |-mvp MUTED_VIDEO_PATH, --muted-video-path MUTED_VIDEO_PATH | 無聲影片檔案的資料夾路徑，例如 muted_video/。預設值：$home/Desktop/material_dir_[yyyymmdd]。 |
-        |-dp DST_PATH, --dst-path DST_PATH | 目標影片檔案的資料夾路徑，例如 dst/。預設值：$home/Desktop/material_dir_[yyyymmdd]。 |
+        |`-h`, `--help` | 顯示此說明訊息並退出。 |
+        |`-s SRC_PATH`, `--src-path SRC_PATH` | 來源影片的路徑，例如 `C:\Users\me\Desktop\src_video\a.mp4`。 |
+        |`-sp SRT_PATH`, `--srt-path SRT_PATH` | srt 檔案的資料夾路徑，例如 `srt/`。預設值：`$home/Desktop/material_dir_[yyyymmdd]`。 |
+        |`-ap AUDIO_PATH`, `--audio-path AUDIO_PATH` | 音訊檔案的資料夾路徑，例如 `audio/`。預設值：`$home/Desktop/material_dir_[yyyymmdd]`。 |
+        |`-mvp MUTED_VIDEO_PATH`, `--muted-video-path MUTED_VIDEO_PATH` | 無聲影片檔案的資料夾路徑，例如 `muted_video/`。預設值：`$home/Desktop/material_dir_[yyyymmdd]`。 |
+        |`-dp DST_PATH`, `--dst-path DST_PATH` | 目標影片檔案的資料夾路徑，例如 `dst/`。預設值：`$home/Desktop/material_dir_[yyyymmdd]`。 |
     * 範例。
         * 不指定其餘參數，僅給來源影片路徑，則此工具會在桌面建立以 `material_dir_[yyyymmdd]` 命名的資料夾，其中 `[yyyymmdd]` 表當天日期。
             ```bash
