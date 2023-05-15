@@ -2,10 +2,13 @@
 A speech translater for video with OpenAI Whisper api.
 
 ## 基本需求
-- [ ] 1. 取得原影片語音轉文字內容之字幕。
-- [ ] 2. 取得字幕的翻譯（中翻英）。
+- [x] 1. 取得原影片語音轉文字內容之字幕。
+    > 可由 Whisper api 取得語音辨識結果並翻譯。 
+- [x] 2. 取得字幕的翻譯（中翻英）。
+    > 可由 Whisper api 取得語音辨識結果並翻譯。 
 - [ ] 3. 取得英文版字幕的配音語音。
 - [ ] 4. 結合原影片與英文版配音。
+    > 可由 ffmpeg 取得靜音影片。 
 
 ## 相關工具
 - [Clipchamp](https://app.clipchamp.com/)
