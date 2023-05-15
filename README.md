@@ -45,7 +45,7 @@ with open(file_path, "rb") as audio_file:
 * 透過 `edge-srt-to-speech` 取得可接受配音。
 ```bash
 # execute in PowerShell
-> edge-srt-to-speech <srt file> <output_audio file> [--voice <voice name>] [--default-speed<=[+-][0-100]%>]
+> edge-srt-to-speech <srt file> <output_audio file> [--voice=<voice name>] [--default-speed<=[+-][0-100]%>]
 ```
 ### 結合原影片與英文版配音。
 * 取得去除聲音版本的影像檔（CLI）。
