@@ -48,29 +48,37 @@ def get_muted_video(src_path, dst_path):
     os.system(cmd)
 
 
-def combine_muted_video_and_audio():
+def combine_muted_video_and_audio(muted_video_path, audio_path, dst_path):
     '''
         Combine muted video and audio.
+        CLI example:
+            ffmpeg -i a_mute.mp4 -i a.mp3 -c:v copy -c:a aac a_en.mp4 -shortest
     '''
-    pass
+    cmd = f"ffmpeg -i {muted_video_path} -i {audio_path} -c:v copy -c:a aac {dst_path} -shortest"
+    os.system(cmd)
 
 
 def main():
-    # get_srt(
-    #     src_path="C:\\Users\\loveh\\Desktop\\test_project\\src_videos\\_1_遊戲介紹.mp4", 
-    #     dst_path="C:\\Users\\loveh\\Desktop\\test_project\\srts\\_1_遊戲介紹.srt",
-    #     response_format="srt", 
-    #     language="en",
-    # )
-    # get_audio(
-    #     srt_path="C:\\Users\\loveh\\Desktop\\test_project\\srts\\_1_遊戲介紹.srt", 
-    #     audio_path="C:\\Users\\loveh\\Desktop\\test_project\\audios\\_1_遊戲介紹.mp3", 
-    #     voice="en-US-JennyNeural", 
-    #     default_speed="-25%",
-    # )
+    get_srt(
+        src_path="C:\\Users\\loveh\\Desktop\\test_project\\src_video\\_1_遊戲介紹.mp4", 
+        dst_path="C:\\Users\\loveh\\Desktop\\test_project\\srt\\_1_遊戲介紹.srt",
+        response_format="srt", 
+        language="en",
+    )
+    get_audio(
+        srt_path="C:\\Users\\loveh\\Desktop\\test_project\\srt\\_1_遊戲介紹.srt", 
+        audio_path="C:\\Users\\loveh\\Desktop\\test_project\\audio\\_1_遊戲介紹.mp3", 
+        voice="en-US-JennyNeural", 
+        default_speed="-25%",
+    )
     get_muted_video(
-        src_path="C:\\Users\\loveh\\Desktop\\test_project\\src_videos\\_1_遊戲介紹.mp4", 
-        dst_path="C:\\Users\\loveh\\Desktop\\test_project\\muted_videos\\_1_遊戲介紹_muted.mp4",
+        src_path="C:\\Users\\loveh\\Desktop\\test_project\\src_video\\_1_遊戲介紹.mp4", 
+        dst_path="C:\\Users\\loveh\\Desktop\\test_project\\muted_video\\_1_遊戲介紹_muted.mp4",
+    )
+    combine_muted_video_and_audio(
+        muted_video_path="C:\\Users\\loveh\\Desktop\\test_project\\muted_video\\_1_遊戲介紹_muted.mp4",
+        audio_path="C:\\Users\\loveh\\Desktop\\test_project\\audio\\_1_遊戲介紹.mp3",
+        dst_path="C:\\Users\\loveh\\Desktop\\test_project\\dst_video\\_1_遊戲介紹_en.mp4",
     )
 
 
