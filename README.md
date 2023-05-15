@@ -3,6 +3,7 @@ A speech translater for video with OpenAI Whisper api.
 
 ## 相關工具
 - [Clipchamp](https://app.clipchamp.com/)
+- [Download FFmpeg](https://ffmpeg.org/download.html#build-windows)
 
 ## 參考資源
 1. [Speech to text - OpenAI document](https://platform.openai.com/docs/guides/speech-to-text)
