@@ -1,6 +1,12 @@
 # videoSpeechTranslater
 A speech translater for video with OpenAI Whisper api.
 
+## 基本需求
+- [ ] 1. 取得原影片語音轉文字內容之字幕。
+- [ ] 2. 取得字幕的翻譯（中翻英）。
+- [ ] 3. 取得英文版字幕的配音語音。
+- [ ] 4. 結合原影片與英文版配音。
+
 ## 相關工具
 - [Clipchamp](https://app.clipchamp.com/)
 - [Download FFmpeg](https://ffmpeg.org/download.html#build-windows)
