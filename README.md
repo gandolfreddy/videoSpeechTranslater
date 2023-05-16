@@ -14,7 +14,7 @@ A speech translater for video with OpenAI Whisper api for Windows 10/11.
 ## 目前版本使用說明
 1. 於電腦中安裝 [FFmpeg](https://ffmpeg.org/download.html#build-windows)。
 2. 於電腦中安裝 [Python](https://www.python.org/downloads/)。
-3. 下載此 Repository 至本機端。
+3. 下載此 Repository 至本機端（以下兩種方式可擇一使用）。
     * 使用 git。
         ```bash
         # execute in PowerShell
