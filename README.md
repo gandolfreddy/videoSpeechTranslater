@@ -2,6 +2,7 @@
 A speech translater for video with OpenAI Whisper api for Windows 10/11.
 
 ## 基本需求
+### 中轉英
 - [x] 1. 取得原影片語音轉文字內容之字幕。
     > 可由 Whisper api 取得語音辨識結果並翻譯。 
 - [x] 2. 取得字幕的翻譯（中翻英）。
@@ -10,6 +11,25 @@ A speech translater for video with OpenAI Whisper api for Windows 10/11.
     > 透過 `edge-srt-to-speech` 取得可接受配音。
 - [x] 4. 結合原影片與英文版配音。
     > 透過 ffmpeg 取得靜音影片，並透過 ffmpeg 結合靜音影片與音訊。 
+
+### 中轉中（改善語調與口齒不清問題）
+- [x] 1. 取得原影片語音轉文字內容之字幕。
+    > 可由 Whisper api 取得語音辨識結果。 
+- [x] 2. 取得中文字幕的配音語音。
+    > 透過 `edge-srt-to-speech` 取得可接受配音。
+- [x] 3. 結合原影片與新配音。
+    > 透過 ffmpeg 取得靜音影片，並透過 ffmpeg 結合靜音影片與音訊。 
+
+## 待解決問題
+### 共同問題
+- [ ] 若檔案大小超過 25MB，Whisper api 將會無法動作，需要克服此問題。
+### 中轉英
+- [ ] 目前成品中，語音的語速不均，需有額外且方便調整機制或介面。
+- [ ] 有時翻譯語句不理想，需有額外且方便調整機制或介面。
+### 中轉中（改善語調與口齒不清問題）
+- [ ] 目前成品中，語音的語速不均，需有額外且方便調整機制或介面。
+- [ ] 若影片中夾雜英文，讀音通常不太符合原聲，需有額外且方便調整機制或介面。
+- [ ] 有時取得語句不理想，需有額外且方便調整機制或介面。
 
 ## 目前版本使用說明
 1. 於電腦中安裝 [FFmpeg](https://ffmpeg.org/download.html#build-windows)。
@@ -115,7 +135,13 @@ A speech translater for video with OpenAI Whisper api for Windows 10/11.
     # execute in PowerShell
     > ffmpeg -i <muted video file> -i <audio file> -c:v copy -c:a aac <output_video file> -shortest
     ```
-
+### 將超過特定檔案大小（25MB）的檔案進行壓縮。
+* 利用 `ffmpeg` 進行壓縮。
+    ```bash
+    # execute in PowerShell
+    > ffmpeg -i <video file> -b:v 256K <output_video file>
+    ```
+    
 ## <span style="color: red;">實驗結果</span>
 - 此流程基本可動作，**但於最後產出影片中，有部份音訊因受到字幕檔時間限制，讀文字的速度較快**，直接使用恐較不符合預期，需要靠後期精修處理。
 
@@ -124,6 +150,7 @@ A speech translater for video with OpenAI Whisper api for Windows 10/11.
 - [Download FFmpeg](https://ffmpeg.org/download.html#build-windows)
 - [rany2/edge-srt-to-speech](https://github.com/rany2/edge-srt-to-speech)
 - [rany2/edge-tts](https://github.com/rany2/edge-tts)
+- [byroot/pysrt](https://github.com/byroot/pysrt)
 
 ## 參考資源
 1. [Speech to text - OpenAI document](https://platform.openai.com/docs/guides/speech-to-text)
@@ -135,7 +162,17 @@ A speech translater for video with OpenAI Whisper api for Windows 10/11.
 7. [( Day 18 ) 取出影片聲音、影片加入聲音](https://ithelp.ithome.com.tw/articles/10292945?sc=rss.qu)
 8. [Subtitles to speech converter](https://voicenotebook.com/srtspeaker.php)
 9. [Documentation - FFmpeg](https://www.ffmpeg.org/documentation.html)
-10. [使用 ffmpeg 移除影片中的聲音 @ Windows](https://blog.changyy.org/2013/08/ffmpeg-windows.html)
-11. [影音剪輯 / 使用 ffmpeg 指令合併影片及聲音檔 (直接複製資料不重新編碼)](https://note.charlestw.com/merging-video-and-audio-in-ffmpeg/)
-12. [ffmpeg-python 0.2.0](https://pypi.org/project/ffmpeg-python/)
-13. [argparse — Parser for command-line options, arguments and sub-commands](https://docs.python.org/3/library/argparse.html)
+10. [介紹好用工具：FFmpeg (強大的錄影、轉檔、串流工具與函式庫)](https://blog.miniasp.com/post/2022/10/08/Useful-tool-FFmpeg)
+11. [使用 ffmpeg 移除影片中的聲音 @ Windows](https://blog.changyy.org/2013/08/ffmpeg-windows.html)
+12. [影音剪輯 / 使用 ffmpeg 指令合併影片及聲音檔 (直接複製資料不重新編碼)](https://note.charlestw.com/merging-video-and-audio-in-ffmpeg/)
+13. [ffmpeg-python 0.2.0](https://pypi.org/project/ffmpeg-python/)
+14. [argparse — Parser for command-line options, arguments and sub-commands](https://docs.python.org/3/library/argparse.html)
+15. [字幕文件 srt 處理之 pysrt](https://www.cnblogs.com/yunhgu/p/14948777.html)
+16. [影音剪輯 / 使用 ffmpeg 分割影片 (指定開始及結束時間或固定時間長度分割)](https://note.charlestw.com/ffmpeg-trim-chunk/)
+17. [[軟體] FFmpeg - 分割影片　超簡易 手把手 帶上手=D](https://blog.xuite.net/coldfragrance/wretch/588324484)
+18. [改變聲音播放速度](https://steam.oxxostudio.tw/category/python/example/pydub-sound-speed.html#a2)
+19. [用 ffmpeg 壓縮影片](https://zhuanlan.zhihu.com/p/255042580)
+20. [使用 ffmpeg 壓縮影片](http://fcamel-life.blogspot.com/2012/07/ffmpeg.html)
+21. [影片太大，就用 ffmpeg 壓縮影片](https://www.depal.com.tw/linux/ffmpeg)
+22. [FFmpeg：變更影片／音訊位元速率（比特率）以節省空間或適用網路串流](https://mnya.tw/cc/word/1443.html)
+23. [[FFmpeg] 影音加減速](https://hackmd.io/@kd01/HJCR49e3O)
