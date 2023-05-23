@@ -146,6 +146,7 @@ A speech translater for video with OpenAI Whisper api for Windows 10/11.
 - 此流程基本可動作，**但於最後產出影片中，有部份音訊因受到字幕檔時間限制，讀文字的速度較快**，直接使用恐較不符合預期，需要靠後期精修處理。
 
 ## 相關工具
+- [課程影片中轉英 google slides - Poyi 整理](https://docs.google.com/presentation/d/1iBbmpsf6kCSsfJ_0kWhX0ZEzWUj94oW4kNU_7Ne3BoU/edit?usp=sharing)
 - [Clipchamp](https://app.clipchamp.com/)
 - [Download FFmpeg](https://ffmpeg.org/download.html#build-windows)
 - [rany2/edge-srt-to-speech](https://github.com/rany2/edge-srt-to-speech)
